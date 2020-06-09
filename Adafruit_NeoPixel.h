@@ -134,7 +134,7 @@ class Adafruit_NeoPixel : public NPB_IMPL {
             uint8_t g = (c >>  8) & 0xFF;
             uint8_t b =  c        & 0xFF;
             auto color = COLOR_FEATURE::ColorObject(r, g, b);
-            NPB_IMPL::ClearTo(color, first, first+count);
+            NPB_IMPL::ClearTo(color, first, first+count-1);
         }
 
         uint16_t numPixels(void) const {
